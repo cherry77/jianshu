@@ -20,15 +20,25 @@ import {
 
 class Header extends Component {
     getSearchInfo(){
-        const {focused, list} = this.props
-        if(focused){
+        const {focused, mouseEnter, list, page, totalPage, handleMouseEnter,handleMouseLeave, handleClickPage} = this.props
+        const pageList = [];
+        const newList = list.toJS(list)
+        if(newList.length){
+            for(let i = (page - 1) * 10; i < page * 10; i ++){
+                if(newList[i]){
+                    pageList.push(<SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>)
+                }
+            }
+        }
+       
+        if(focused || mouseEnter){
             return (
-                <SearchInfo>
-                    <SearchInfoTitle>热门搜索<SearchInfoSwitch>换一批</SearchInfoSwitch></SearchInfoTitle>
+                <SearchInfo onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}>
+                    <SearchInfoTitle>热门搜索<SearchInfoSwitch
+                        onClick={() => handleClickPage(page, totalPage)}>换一批</SearchInfoSwitch></SearchInfoTitle>
                     <SearchInfoList>
-                        {list.map((item) => {
-                            return <SearchInfoItem key={item}>{item}</SearchInfoItem>
-                        })}
+                        {pageList}
                     </SearchInfoList>
                 </SearchInfo>
             )
@@ -72,7 +82,10 @@ const mapStateToProps = (state) => {
     return {
         // focused: state.get('header').get('focused')
         focused: state.getIn(['header', 'focused']),
-        list: state.getIn(['header', 'list'])
+        list: state.getIn(['header', 'list']),
+        page: state.getIn(['header', 'page']),
+        totalPage: state.getIn(['header', 'totalPage']),
+        mouseEnter: state.getIn(['header', 'mouseEnter'])
     }
 }
 const mapDispatchToProps = (dispatch) => {
@@ -83,6 +96,20 @@ const mapDispatchToProps = (dispatch) => {
         },
         handleInputBlur(){
             dispatch(actionCreators.searchBlur())
+        },
+        handleMouseEnter(){
+            dispatch(actionCreators.mouseEnter())
+        },
+        handleMouseLeave(){
+            dispatch(actionCreators.mouseLeave())
+        },
+        handleClickPage(page, totalPage){
+            if(page < totalPage){
+                dispatch(actionCreators.changePage(page + 1))
+            }else{
+                dispatch(actionCreators.changePage(1))
+            }
+
         }
     }
 }
