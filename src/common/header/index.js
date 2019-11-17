@@ -19,27 +19,15 @@ import {
 } from './style'
 
 class Header extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    getSearchInfo(show){
-        if(show){
+    getSearchInfo(){
+        if(this.props.focused){
             return (
                 <SearchInfo>
                     <SearchInfoTitle>热门搜索<SearchInfoSwitch>换一批</SearchInfoSwitch></SearchInfoTitle>
                     <SearchInfoList>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
+                        {this.props.list.map((item) => {
+                            return <SearchInfoItem key={item}>{item}</SearchInfoItem>
+                        })}
                     </SearchInfoList>
                 </SearchInfo>
             )
@@ -64,7 +52,7 @@ class Header extends Component {
                                        onFocus={this.props.handleInputFocus} onBlur={this.props.handleInputBlur}></NavSearch>
                         </CSSTransition>
                         <i className={this.props.focused ? 'focused iconfont iconmagnifier': 'iconfont iconmagnifier'}></i>
-                        {this.getSearchInfo(this.props.focused)}
+                        {this.getSearchInfo()}
                     </SearchWrapper>
                     <Addition>
                         <Button className="writting">
@@ -81,13 +69,15 @@ class Header extends Component {
 const mapStateToProps = (state) => {
     return {
         // focused: state.get('header').get('focused')
-        focused: state.getIn(['header', 'focused'])
+        focused: state.getIn(['header', 'focused']),
+        list: state.getIn(['header', 'list'])
     }
 }
 const mapDispatchToProps = (dispatch) => {
     return {
         handleInputFocus(){
             dispatch(actionCreators.searchFocus())
+            dispatch(actionCreators.getSearchHotList())
         },
         handleInputBlur(){
             dispatch(actionCreators.searchBlur())
