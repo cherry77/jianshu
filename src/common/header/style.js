@@ -60,6 +60,40 @@ export const SearchWrapper = Styled.div`
         }
     }
 `;
+export const SearchInfo = Styled.div`
+    position: absolute;
+    top: 56px;
+    width: 240px;
+    padding: 0 15px;
+    box-shadow: 0 0 8px rgba(0,0,0,.2)
+`;
+export const SearchInfoTitle = Styled.div`
+   margin-top: 20px;
+   margin-bottom: 15px;
+   line-height: 20px;
+   font-size: 14px;
+   color: #969696
+`;
+
+export const SearchInfoSwitch = Styled.span`
+   float: right    
+   font-size: 13px;
+`;
+export const SearchInfoList = Styled.span`
+   overflow:hidden;
+`;
+export const SearchInfoItem = Styled.a`
+   display: block;
+   float: left;
+   line-height: 20px;
+   padding: 0 5px;
+   border: 1px solid #ddd;
+   font-size: 12px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   border-radius: 3px;
+`;
+
 export const NavSearch = Styled.input.attrs({
     placeholder: '搜索'
 })`
