@@ -20,12 +20,13 @@ import {
 
 class Header extends Component {
     getSearchInfo(){
-        if(this.props.focused){
+        const {focused, list} = this.props
+        if(focused){
             return (
                 <SearchInfo>
                     <SearchInfoTitle>热门搜索<SearchInfoSwitch>换一批</SearchInfoSwitch></SearchInfoTitle>
                     <SearchInfoList>
-                        {this.props.list.map((item) => {
+                        {list.map((item) => {
                             return <SearchInfoItem key={item}>{item}</SearchInfoItem>
                         })}
                     </SearchInfoList>
@@ -36,6 +37,7 @@ class Header extends Component {
         }
     }
     render () {
+        const {focused, handleInputFocus, handleInputBlur} = this.props
         return (
             <HeadWrapper>
                 <Logo></Logo>
@@ -47,11 +49,11 @@ class Header extends Component {
                     </NavItem>
                     <NavItem className="right">登录</NavItem>
                     <SearchWrapper>
-                        <CSSTransition in={this.props.focused} timeout={200} classNames="slide">
-                            <NavSearch className={this.props.focused ? 'focused': ''}
-                                       onFocus={this.props.handleInputFocus} onBlur={this.props.handleInputBlur}></NavSearch>
+                        <CSSTransition in={focused} timeout={200} classNames="slide">
+                            <NavSearch className={focused ? 'focused': ''}
+                                       onFocus={handleInputFocus} onBlur={handleInputBlur}></NavSearch>
                         </CSSTransition>
-                        <i className={this.props.focused ? 'focused iconfont iconmagnifier': 'iconfont iconmagnifier'}></i>
+                        <i className={focused ? 'focused iconfont iconmagnifier': 'iconfont iconmagnifier'}></i>
                         {this.getSearchInfo()}
                     </SearchWrapper>
                     <Addition>
