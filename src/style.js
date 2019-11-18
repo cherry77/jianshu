@@ -48,12 +48,12 @@ export const GlobalStyle = createGlobalStyle `
     // iconfont
     @font-face {
       font-family: "iconfont";
-      src: url('iconfont.eot?t=1573867112044'); /* IE9 */
-      src: url('iconfont.eot?t=1573867112044#iefix') format('embedded-opentype'), /* IE6-IE8 */
-      url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPYAAsAAAAAB+gAAAOLAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDKIMOATYCJAMQCwoABCAFhG0HQhv6BhHVmyPJfh5kbsecFXic/BUmik7aSfRz8EDvWW8y024uWQkHwV+SioP4pRZAwOKcBzYqQo3k3NmjLyRd22GWUwD8z+W0McXmt7Mcb6yisTdHvQCjCRTQ3tgmK6CcM2oYu/IiTkMABpHSicpVazdGR2FMEoDo3aNbB/SUDlVTLNARWEtWKsR8LOjaDO0aMM//vPhIbh00LBJjZv2uVTpT/k3h22Q53jW+tcsBG88CsHUggXSgQHQvtXVEhrF0EkP5jqIQ6Oho8KbwTZ23yS4XxPfC6qYdtN4/nrBiFLoDkA8ZeWKYjUCDN3UQSHibjN/AOQoAHXADJgLHkTD8MQKFFq/rAWZIwKilzxrb7gU0czrL2Z3NrtgaO51Nml1wVL7pSQ/Y7tNsmdPLaOre2Ohltmi5NNJYHdy8w1FzFhjCOGXMvCEmNGs2gd69dJN9mxi/2Zx1Vohes2pcLnPcbreV9vc/ZjNm1rzicEzI2+t01ptpq2+b2OS23ZwV/6kmaU2dD5recZTcm3a1d/trfxbcGpNubZiaVrtCq6P1QzaG12h4awg13BoUnx5TxyOl8chWjL7WJ72WltfgZ71dn4juGRWlX04tTnWtdju58u0uni5dydGzbL0mWsWOPco61Z+ygwafL54lLBUy+6U07eHRxqxVvuSrts0GXw0J+BOa8D0hktufy0099PhoVj9tVHL/NdsfHOydUjqX3qpV1uCx3Wfh3oOz3ladmN+oe9/o7n0aB2VVK4zMKHPw4FFrz7Z9rf6dezaamE9/AFx2uVUW+XKXPCVJfJDLZNCvHEWH3Z/7tvMq/Vs3r6Xh/u9+DnlddkU/7H9grbEfh7WsUiph6JWSSRvV7IrsxCQ0wMAAflcKfD0ZwxGA2CLQOQZBw40IkOjEc5UwHSyY5IMVnXJgkKbaehM/A5EIVQxINQWAwNtO0PDkJEi8Xecq4WOwEOgzWPEuwaCp8NvRJLHtd0dGJWhB/8GbriXLKLug+IbuXStOEr7shTz6IORJlk1esUUeY874cYUIAXHXwAWch3XdQc9dQCNJJdKXaUplL0pM10x2HBmVoAX9B2+6ltz6ssu9/4buXSuuqaiov5BH3z3kSdaCe2XbVhXXcsn4cYUIAXHXwAVYsDZjHfTlwwIaSaoekb5MUS1qyybza5sn3AEYGH2V0IQUSlhYd720Ayrk2V5tG+VaTx55MgEA') format('woff2'),
-      url('iconfont.woff?t=1573867112044') format('woff'),
-      url('iconfont.ttf?t=1573867112044') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
-      url('iconfont.svg?t=1573867112044#iconfont') format('svg'); /* iOS 4.1- */
+      src: url('iconfont.eot?t=1574033063916'); /* IE9 */
+      src: url('iconfont.eot?t=1574033063916#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQ8AAsAAAAACHwAAAPuAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqEGINuATYCJAMUCwwABCAFhG0HSRt7B8gekiQlAgccJICCBACKgFrWetL+/tyHrILKwabgXr16nVEgzFsUKITCeCiPzMLk8sib/j3rFav0jKzULIwkXah4aVNPmrXuvmgUB7sJEDD785fTu9oY2Hz2Lcexpu1NHVWA0QQKaG9fRAOkADHnhrGLyzhPQDXNB+ckJQsH9jJtWkB4QcvFwD5mlEtYQatpctZm4S0o2viaexHwxn1/+Ccge6KSaHOvbpNlIO5nyMt8Xpu1DdzYGBD1ZweziYQVQCa8zHW+wPPDK3iq9D2+A0DViuLPvefZLzxe5lutyNIVqav+h0eSRYHQ0LL7wAHSZzsnMhGJn9mIzC8PROR3vvhcLimgohfvAf8RdfIeUZDF4aEu9vbjgrEja/FDJmA04hyc4Fi+idrNJBlNaTPliw6b+f6g8d1D3HhzpMhiiTXBQeeNuMVCiE6bk644zN3G64jmWAYj1wNwRCUoLpk9CVk4pkh8QDAVqKF+rFMuc9pFonZ69Shi51rwvE4w9QSH8zQ1/Vz0IZPJGDVixEEjMiXjvNncHrjDYsmdYswzdhDXTIKp4cGEN2m5TV43/zlYXHwPM8Rze3fu7OXGtWpPxR3i//3LP1SauOxPh1xrrfVrQMTeF9RVF/9Mu9rsY1vg5Z0VX3ogb+zyCekFV6tBek9+WJ9j9kBPvKEUNH3S+GRyA/O/5FbNRIVvAm+4fyY4SqVe80i6BgdZJcdmZUwuwU2Q0DEW/p8YA3sqDOPYHAp1niQ9sFyQGRfxtELEXhg78s8410+uk8C1d7E9e+8dwHTcRg/9ok2396g9o1KJpaUY26KY6vRnsRcpHUGFCi2q0OBeQUp8g2/0nj0HjMQKre0ImbIweRQIA9A1pQ28UAC61nQ0cdHXaQ5v9F/wGZef05dVDo76Zi/I4MePH2vcsm4bH6Rn4FWq1Ba9c1HNqixLNFPJYqUpFF3FRsQoSk0Vb9o74n4/7nEgtActK4IQ9ZiCpDWDZ+oKFB070GjtQ7UsdXPHKAZPyL1Y0g0gGLIFogEfIBlyCc/Ue1BMeAeNoXhQXYfhe3bMRSOJDBSzUIZK6lFaqtNShoVFvNwCKK9Wi5moxGWTkDHQPtRf6JeMpUItZPpYYKiRB7AshVKMToOmgMugWq1D9YxOCaWsUMGy+ggMo/IeJJTqNABxjAGJsSAZlEQ9FE1KR4uyG7OQ1OsLQHLV1MSYEkJJkAQxDOjeUf6E/GrgqUptLcK5DDaoIReAxaLwJApDRwOVAu2QWg/roPT5o5QgKZaQokVQLwKG6lF1lcLx1Zpr3AWVdkgJMaSQQwmN/EpPa+2osztCARluvNhBI5ZraYqGDAAAAA==') format('woff2'),
+      url('iconfont.woff?t=1574033063916') format('woff'),
+      url('iconfont.ttf?t=1574033063916') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+      url('iconfont.svg?t=1574033063916#iconfont') format('svg'); /* iOS 4.1- */
     }
     
     .iconfont {
@@ -62,6 +62,10 @@ export const GlobalStyle = createGlobalStyle `
       font-style: normal;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .iconspin:before {
+      content: "\\e851";
     }
     
     .iconfeather:before {

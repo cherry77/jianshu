@@ -78,6 +78,14 @@ export const SearchInfoTitle = Styled.div`
 export const SearchInfoSwitch = Styled.span`
    float: right    
    font-size: 13px;
+   .iconspin{
+     display: block;
+     float: left; 
+     font-size: 12px;
+     margin-right: 2px;
+     transition: all .2s ease-in;
+     transform-origin: center;
+   }
 `;
 export const SearchInfoList = Styled.span`
    overflow:hidden;
